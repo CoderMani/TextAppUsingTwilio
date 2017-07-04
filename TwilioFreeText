@@ -1,0 +1,13 @@
+
+from twilio.rest import client
+
+account_sid = 'xxxxxxx'
+auth_tocken = 'xxxxxxxxxx'
+my_cell = 'your number in with you have created twilio account'
+my_twilio = 'your twilio number'
+
+client = Client(account_sid,auth_tocken)
+
+message = client.message.create(to='your number', from='twilio number', body='text from twilio')
+
+print(message.sid)
